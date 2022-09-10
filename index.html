@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple Pricing</title>
+        <link rel="stylesheet" href="assets/styles/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Simple Pricing!</h1>
+            <p> The most advanced customer support tools with a simple and affordable pricing. And you can always try for 30 days. <br> free!</p>
+        </header>
+        <main>
+            <div class="content">
+                <article class="pricelist">
+                    <section class="pricecard" onclick="clickFunction(this.id); return true" id="selectBasic">
+                        <h2>Basic</h2>
+                        <h3><span id="dollar">$</span>4<span id="tag">/month</span></h3>
+                        <hr>
+                        <div class="basic">
+                            <ul>
+                                <li><b>10</b> Projects</li>
+                                <li><b>10</b> Pages</li>
+                                <li><b>100</b> Mb Disk Space</li>
+                            </ul>
+                            <button onclick="clickFunction(this.id); return false" id="buyBasic"><a>Buy Now</a></button>
+                        </div>
+                    </section>
+                    <section class="pricecard" onclick="clickFunction(this.id); return true" id="selectStandard">
+                        <h2>Standard <span id="tagsave">Save 15%</span></h2>
+                        <h3><span id="dollar">$</span>8<span id="tag">/month</span></h3>
+                        <hr>
+                        <div class="standard">
+                            <ul>
+                                <li><b>20</b> Projects</li>
+                                <li><b>20</b> Pages</li>
+                                <li><b>200</b> Mb Disk Space</li>
+                            </ul>
+                            <button onclick="clickFunction(this.id); return false" id="buyStandard"><a>Buy Now</a></button>
+                        </div>
+                    </section>
+                    <section class="pricecard" onclick="clickFunction(this.id); return true" id="selectAdvanced">
+                        <h2>advanced</h2>
+                        <h3><span id="dollar">$</span>12<span id="tag">/month</span></h3>
+                        <hr>
+                        <div class="advanced">
+                            <ul>
+                                <li><b>40</b> Projects</li>
+                                <li><b>40</b> Pages</li>
+                                <li><b>400</b> Mb Disk Space</li>
+                            </ul>
+                            <button onclick="clickFunction(this.id); return false" id="buyAdvanced"><a>Buy Now</a></button>
+                        </div>
+                    </section>
+                    <script>
+                        function clickFunction(id){
+                            var element = document.getElementById(id);
+                            if(id=="buyBasic"){
+                                alert("Buy Success! You Have Choose This Pricing!");
+                                document.getElementById("selectBasic").classList.toggle("is-selected")='none';
+                            }else if(id=="buyStandard"){
+                                alert("Buy Success! You Have Choose This Pricing!");
+                                document.getElementById("selectStandard").classList.toggle("is-selected")='none';
+                            }else if(id=="buyAdvanced"){
+                                alert("Buy Success! You Have Choose This Pricing!");
+                                document.getElementById("selectAdvanced").classList.toggle("is-selected")='none';
+                            }
+                            else{
+                                element.classList.toggle("is-selected");  
+                            }
+                        }
+                    </script>
+                </article>
+                <article class="question">
+                    <h1>Frequently Asked Questions</h1>
+                    <div class="askcontent">
+                        <section class="ask1">
+                            <h2>How does free trial work?</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt dui ut ornare lectus sit amet est placerat in. Non arcu risus quis varius quam quisque.</p>
+                        </section>
+                        <section class="ask2">
+                            <h2>Can I cancel any time?</h2>
+                            <p>Tempus imperdiet nulla malesuada pellentesque elit. Diam quam nulla porttitor massa id neque. Consequat mauris nunc congue nisi vitae suscipit tellus mauris a. Arcu ac tortor dignissim convallis aenean et.</p>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <footer>
+            <p>Front End  Developer - Coding Challenge by ZettaByte &#169; 2022, Rizka Studio</p>
+        </footer>
+    </body>
+</html>
